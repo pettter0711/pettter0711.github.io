@@ -1,0 +1,27 @@
+.flex{
+    background: yellow;
+    width: 250px;
+    height: 300px;
+    margin: 20px auto;
+    color: #fff;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.flex-item{
+    width: 100px;
+    height: 100px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-item:nth-child(2) {
+    background: blue;
+}
+
+.flex-item:nth-child(3) {
+    background: red;
+}
