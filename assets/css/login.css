@@ -1,0 +1,129 @@
+body{
+    background-color: #bdbdbd;
+}
+
+.login-wrap {
+    --w: 400px;
+    --h: 400px;
+    --h: 390px;
+    position: fixed;
+    width: var(--w);
+    height: var(--h);
+    background: #fff;
+    top: calc(50% - (var(--h) / 2));
+    left: calc(50% - (var(--w) / 2));
+    top: calc(50% - (var(--h) / 2));
+    border-radius: 4px;
+    padding: 20px;
+    z-index: 2;
+}
+
+.login-content {
+    padding: 20px;
+}
+
+.slogan {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000;
+    letter-spacing: 2px;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.form-item label {
+    font-size: 16px;
+}
+
+.form-item input {
+    width: 100%;
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+    border: 2px solid #dedede;
+    border-radius: 4px;
+    outline: 0;
+}
+
+.login-func {
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-func button,
+.login-func label{
+    padding: 10px 20px;
+    border: 0;
+    background: #1973a7;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 5px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+#popup-switch:checked~.login-success {
+    display: flex;
+}
+
+#popup-switch {
+    display: none;
+}
+
+.login-success {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #00000063;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+/* .login-success.active {
+    display: flex;
+} */
+
+.message-wrap {
+    background: #fff;
+    padding: 20px;
+    min-width: 300px;
+    min-height: 200px;
+    border-radius: 4px;
+}
+
+.message-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.message-content {
+    text-align: center;
+}
+
+.message-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.message-btn .btn {
+    border: 0;
+    padding: 10px 20px;
+    background: #1743a0;
+    color: #fff;
+    cursor: pointer;
+}
