@@ -87,3 +87,85 @@ body{
     width: 100%;
     background-color: #0000008f;
 }
+
+.page-position{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.page-row{
+    background-color: rgba(14, 50, 80, 0.9);
+    display: flex;
+    /* align-items: center; */
+    width: 100%;
+    min-height: 300px;
+    color: #fff;
+}
+
+.page-row>div{
+    width: 50%;
+    padding: 20px;
+}
+
+.page-row .slogan{
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.page-row .slogan::after{
+    content: "";
+    left: calc(50% - 140px);
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    border-left: 100px solid #1072c2;
+    border-right: 180px solid #fff;
+}
+
+.page-row .content{
+    font-size: 0.9rem;
+    line-height: 26px;
+    text-align: justify;
+}
+
+.page-row .form-item{
+    margin-bottom: 10px;
+}
+
+.form-item input{
+    width: 100%;
+    height: 50px;
+    border-radius: 6px;
+    border: 0;
+    outline: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 1.3rem;
+}
+
+.form-button {
+    text-align: right;
+}
+
+.form-button button {
+    padding: 10px 20px;
+    border: 0;
+    background: #0845a0;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.form-button button:hover {
+    background: rgb(255, 59, 45);
+}
