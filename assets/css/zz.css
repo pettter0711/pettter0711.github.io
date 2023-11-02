@@ -1,0 +1,41 @@
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 16px;
+}
+
+.header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.header-row {
+    display: flex;
+    gap: 10px;
+}
+
+.header-row .right-side {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buttons .link-button {
+    display: flex;
+    gap: 10px;
+}
+
+.link-button li {
+    display: inline-block;
+    background-color: #eeeeee;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: 0.4s;
+}
+
+.link-button li:hover,
+.link-button li.active {
+    color: #2855cf;
+}
