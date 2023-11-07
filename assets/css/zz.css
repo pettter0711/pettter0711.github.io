@@ -6,6 +6,31 @@ body {
 .header {
     padding-top: 10px;
     padding-bottom: 10px;
+    border-bottom: 2px solid #cecece;
+}
+
+
+
+.header .left-side {
+    position: relative;
+    padding-right: 30px;
+    margin-right: 15px;
+}
+
+.header .left-side::after {
+    content: "";
+    position: absolute;
+    height: 70%;
+    width: 2px;
+    background: #cecece;
+    top: 15%;
+    right: 0;
+}
+
+.header .menu ul {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .header-row {
@@ -39,3 +64,56 @@ body {
 .link-button li.active {
     color: #2855cf;
 }
+
+.main {
+    height: 150vh;
+}
+
+.footer {
+    background-color: #fafafa;
+    border-top: 2px solid #cecece;
+}
+
+.footer .copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    border-top: 2px solid #cecece;
+}
+
+.footer .copyright .copyright-icon {
+    margin-right: 5px;
+}
+
+.footer .top-side {
+    display: flex;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    gap: 60px;
+}
+
+.footer .menu {
+    display: flex;
+    gap: 60px;
+}
+
+.footer .menu-title {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.footer .menu-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* .footer .top-side::after {
+    content: "";
+    position: absolute;
+    border-top: 2px solid #cecece;
+    border-bottom: 2px solid #cecece;
+    height: 100%;
+    width: 100%;
+} */
