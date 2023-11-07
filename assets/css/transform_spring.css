@@ -1,0 +1,21 @@
+.wrap {
+    margin: 60px auto;
+    width: 800px;
+}
+
+.spring {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 800;
+    transform: rotate(45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spring .spring-text {
+    transform: rotate(135deg);
+}
