@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/animation_js.css">
+    <title>Animation_JS</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="fn">
+            <button onclick="toggleBlock()">Block</button>
+            <button onclick="toggleBlock('infinite')">infinite</button>
+            <button onclick="toggleRun()">RunRunRun</button>
+        </div>
+        <div class="wrap">
+            <div class="block">
+                TEXT
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="wrap">
+            <div class="runrunrun">
+                runrunrun....
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const blockEl = document.querySelector('.block');
+    function toggleBlock(append) {
+        if (blockEl.classList.contains('change-color')) {
+            blockEl.classList.remove('change-color');
+            blockEl.classList.remove('append');
+        } else {
+            blockEl.classList.add('change-color');
+            blockEl.classList.add('append');
+        }
+    }
+
+    const runEl = document.querySelector('.runrunrun');
+    function toggleRun(append) {
+        if (runEl.classList.contains('active')) {
+            runEl.classList.remove('active');
+        } else {
+            runEl.classList.add('active');
+        }
+    }
+</script>
+
+</html>
