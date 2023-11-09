@@ -21,6 +21,7 @@
     animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    animation-fill-mode: both;
 }
 
 .cloud::after {
@@ -68,5 +69,6 @@
 
     100% {
         left: 1000px;
+        background-color: red;
     }
 }
