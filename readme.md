@@ -4,3 +4,4 @@
 Only for test and practice.
 
 老師github: https://github.com/davidworker/davidworker.github.io
+老師講義: https://book.niceinfos.com/2023/#0
