@@ -121,7 +121,7 @@ body {
     height: 70%;
     top: 15%;
     right: 0;
-    border-right: 2px dashed #fff;
+    border-right: 3px dashed #fff;
 }
 
 .slogan {
@@ -232,7 +232,7 @@ body {
     width: 0;
     height: 100%;
     top: 0;
-    border-right: 2px dashed #fff;
+    border-right: 4px dashed #fff;
 }
 
 .flow-item .circle {
