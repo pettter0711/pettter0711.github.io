@@ -60,20 +60,19 @@
         display: block;
     }
 
-    #mobile-menu-trigger:checked~.header-row.mobile-menu-switch span {
+    #mobile-menu-trigger:checked~.header-row .mobile-menu-switch span {
         background-color: red;
     }
 
-    #mobile-menu-trigger:checked~.header-row.mobile-menu-switch span:first-child {
+    #mobile-menu-trigger:checked~.header-row .mobile-menu-switch span:first-child {
         transform: rotate(45deg) translate(2px, 5px);
     }
 
-    #mobile-menu-trigger:checked~.header-row.mobile-menu-switch span:nth-child(2) {
+    #mobile-menu-trigger:checked~.header-row .mobile-menu-switch span:nth-child(2) {
         display: none;
     }
 
-    #mobile-menu-trigger:checked~.header-row.mobile-menu-switch span:last-child {
+    #mobile-menu-trigger:checked~.header-row .mobile-menu-switch span:last-child {
         transform: rotate(-45deg) translate(2px, -5px);
     }
-
 }
