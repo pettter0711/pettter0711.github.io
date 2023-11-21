@@ -83,4 +83,84 @@ img {
 
 .product-info-text {
     flex: 1;
+    padding-left: 20px;
+}
+
+.product-info .category-nav {
+    display: flex;
+    gap: 25px;
+    color: #7d7d7d;
+}
+
+.product-info .category-nav li {
+    position: relative;
+}
+
+.product-info .category-nav li::after {
+    font-family: 'Material Symbols Outlined';
+    position: absolute;
+    content: '\e5cc';
+    top: 4px;
+    right: -20px;
+}
+
+.product-info .category-nav li:last-child::after {
+    display: none;
+}
+
+.product-info .author-name {
+    color: #179c28;
+}
+
+.product-info .product-name {
+    font-size: 1.6rem;
+    margin: 20px auto;
+}
+
+.product-info .project-process {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.product-info .goal-percentage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 90px;
+    border: 2px solid #179c28;
+    border-radius: 1000px;
+    font-size: 0.9rem;
+}
+
+.product-info .process-info {
+    flex: 1;
+}
+
+.product-info .project-goal {
+    font-size: 0.9rem;
+    color: #7d7d7d;
+}
+
+.product-info .project-current {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.product-info .project-count {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.1rem;
+}
+
+.product-info .project-count-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.product-info .project-count-item>span:last-child {
+    color: #179c28;
 }
