@@ -1,0 +1,86 @@
+:root {
+    --header-h: 70px;
+    --header-bg: #fff;
+    --header-bg-color: #cacaca;
+}
+
+html,
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 16px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.header {
+    height: var(--header-h);
+    background-color: var(--header-bg);
+    border-bottom: 2px solid var(--header-bg-color);
+}
+
+.header-logo {
+    border-right: 2px solid var(--header-bg-color);
+    text-align: center;
+}
+
+.header-logo img {
+    max-width: 70%;
+}
+
+.header-wrap {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-menu {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+
+.header-menu .header-menu-item ul {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.header-menu .menu-button-wrap {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-menu .menu-button-wrap a {
+    padding: 5px 10px;
+    background-color: #eee;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: 0.4s;
+}
+
+.header-menu .menu-button-wrap a:hover,
+.header-menu .menu-button-wrap .active {
+    color: rgb(41, 110, 214);
+}
+
+.product-info {
+    margin: 20px auto;
+}
+
+.product-info-wrap {
+    display: flex;
+}
+
+.product-info-video {
+    flex: 2;
+}
+
+.product-info-text {
+    flex: 1;
+}
