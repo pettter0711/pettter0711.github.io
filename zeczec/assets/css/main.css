@@ -245,7 +245,7 @@ hr.line {
 }
 
 .page-tap .tabs li {
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 600;
     position: relative;
 }
@@ -265,6 +265,14 @@ hr.line {
     width: calc(100% + 8px);
     /* 偽元素為absolute，會把relataive當參考。偽元素width設100%，會跟著參考物的最大寬度走。
     用calc將width以參考物寬加長，再用left扣回去置中 */
+}
+
+.page-tap .tabs li a::after {
+    /* data-count及偽元素attr屬性的結合應用 */
+    content: attr(data-count);
+    padding-left: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
 }
 
 .main-nav-wrap .donate-wrap {
