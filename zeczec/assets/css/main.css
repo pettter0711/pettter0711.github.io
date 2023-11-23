@@ -76,6 +76,7 @@ img {
 
 .product-info-wrap {
     display: flex;
+    align-items: center;
 }
 
 .product-info-video {
@@ -218,4 +219,30 @@ hr.line {
     height: 34px;
     border: 1px solid var(--header-bg-color);
     border-radius: 99px;
+}
+
+.main-nav-block {
+    background-color: #f9fafb;
+    height: 60px;
+}
+
+.main-nav-block .main-nav-wrap {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav-wrap .page-tap {
+    flex: 2;
+}
+
+.main-nav-wrap .page-tap .tabs {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.main-nav-wrap .donate-wrap {
+    flex: 1;
+
 }
