@@ -2,6 +2,7 @@
     --header-h: 70px;
     --header-bg: #fff;
     --header-bg-color: #cacaca;
+    --second-bg-color: #7d7d7d;
 }
 
 html,
@@ -89,7 +90,8 @@ img {
 .product-info .category-nav {
     display: flex;
     gap: 25px;
-    color: #7d7d7d;
+    color: var(--second-bg-color);
+    font-size: 0.9rem;
 }
 
 .product-info .category-nav li {
@@ -127,8 +129,8 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     border: 2px solid #179c28;
     border-radius: 1000px;
     font-size: 0.9rem;
@@ -163,4 +165,57 @@ img {
 
 .product-info .project-count-item>span:last-child {
     color: #179c28;
+}
+
+.product-info .project-description {
+    font-size: 0.9rem;
+    line-height: 26px;
+    text-align: justify;
+    margin: 15px auto;
+}
+
+hr.line {
+    border-color: var(--header-bg-color);
+}
+
+.product-info .project-run-range {
+    font-size: 0.8rem;
+    margin: 15px auto;
+    color: var(--second-bg-color);
+}
+
+.product-info .share-items {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    font-size: 0.8rem;
+    color: #666666;
+}
+
+.share-items .send-message {
+    padding: 5px;
+    border: 1px solid var(--header-bg-color);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.share-items .material-symbols-outlined {
+    font-size: 16px;
+}
+
+.share-items img {
+    max-width: 30px;
+}
+
+.share-items .copy-icon {
+    /* 在目前的結構，display用flex也行。加上inline讓他保持內聯的屬性，但又能做置中等的flex功能 */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border: 1px solid var(--header-bg-color);
+    border-radius: 99px;
 }
