@@ -135,6 +135,7 @@ img {
     border: 2px solid #179c28;
     border-radius: 1000px;
     font-size: 0.9rem;
+    box-shadow: 0px 0px 4px 1px inset #ababab;
 }
 
 .product-info .process-info {
@@ -238,11 +239,33 @@ hr.line {
 
 .main-nav-wrap .page-tap .tabs {
     display: flex;
-    gap: 15px;
+    gap: 25px;
     align-items: center;
+}
+
+.page-tap .tabs li {
+    font-size: 0.9rem;
+    font-weight: 600;
+    position: relative;
+}
+
+.page-tap .tabs li::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: -4px;
+    background-color: #43946c;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+.page-tap .tabs li.active::after {
+    width: calc(100% + 8px);
+    /* 偽元素為absolute，會把relataive當參考。偽元素width設100%，會跟著參考物的最大寬度走。
+    用calc將width以參考物寬加長，再用left扣回去置中 */
 }
 
 .main-nav-wrap .donate-wrap {
     flex: 1;
-
 }
