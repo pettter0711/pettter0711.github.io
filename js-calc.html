@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/calc.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>JS四則運算</h1>
+        <div class="calc-num">
+            <label for="calc-num-1">數字1</label>
+            <input type="number" id="calc-num-1" />
+        </div>
+        <div id="calc-method">
+            <label for="method"></label>
+            <select id="method">
+                <option value="">選擇計算方式</option>
+                <option value="add">加法</option>
+                <option value="sub">減法</option>
+                <option value="mul">乘法</option>
+                <option value="div">除法</option>
+            </select>
+        </div>
+        <div class="calc-num">
+            <label for="calc-num-2">數字2</label>
+            <input type="number" id="calc-num-2" />
+        </div>
+        <div class="btn">
+            <button id="calc-btn">計算</button>
+        </div>
+        <div id="result"></div>
+    </div>
+</body>
+
+<script src="assets/js/calc.js"></script>
+
+</html>
