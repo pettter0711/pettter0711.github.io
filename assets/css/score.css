@@ -1,0 +1,29 @@
+html,
+body {
+    font-family: Verdana, sans-serif;
+}
+
+.slogan {
+    margin: 20px auto;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.score-wrap {
+    display: flex;
+    width: 100%;
+    margin: 10px auto;
+    align-items: center;
+}
+
+.score-wrap>label {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.score-wrap>input {
+    flex: 1;
+    border: 2px solid blue;
+    border-radius: 5px;
+    height: 80px;
+}
