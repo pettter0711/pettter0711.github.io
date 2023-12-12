@@ -49,4 +49,15 @@
     padding: 10px 5px;
     border: 1px solid #dedede;
     border-radius: 8px;
+    transition-duration: 0.3s;
+}
+
+.todo-item>li:hover {
+    color: #fff;
+    border-color: #1a3196;
+    background-color: #1a3196;
+}
+
+.todo-item>li>input[type="checkbox"]:checked+span {
+    text-decoration: line-through;
 }
