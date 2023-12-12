@@ -11,11 +11,11 @@ let items = []; //宣告變數items為一個陣列。
 const render = () => {
     let html = '';
     items.forEach((item, index) => {
-        let checked = item.checked ? 'checked' : '';
-        html += `<li data-index=${index}>
+        let checked = item.checked ? 'checked' : '';  //三元判斷式
+        html += `<li data-index="${index}">
                  <input type="checkbox" ${checked}>
                  <span>${item.text}</span>
-                 </li>`
+                 </li>` //data-index讓li物件加上索引
     })
 
     elItem.innerHTML = html;
