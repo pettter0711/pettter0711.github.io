@@ -12,20 +12,46 @@
 
 <body>
     <div class="container">
-        <h1>ToDo List</h1>
-        <div class="todo-input">
-            <input type="text" id="todo-in">
-            <button id="todo-add-btn">新增</button>
-        </div>
-        <hr>
-        <div class="todo-item-wrap">
-            <ul class="todo-item">
-                <!-- <li>
+        <div class="tabs" id="todo-app">
+            <div class="fn">
+                <h1>ToDo List</h1>
+                <div>
+                    <a href="#" id="change-uid-btn">登出</a>
+                </div>
+            </div>
+            <div class="todo-input">
+                <input type="text" id="todo-in">
+                <button id="todo-add-btn">新增</button>
+            </div>
+            <hr>
+            <div class="todo-item-wrap">
+                <ul class="todo-item">
+                    <!-- <li>
                     <input type="checkbox">
                     <span>TEXT</span>
                 </li> -->
-            </ul>
+                </ul>
+            </div>
         </div>
+        <div class="tabs" id="uid-app">
+            <h1>Add UID</h1>
+            <div class="todo-input">
+                <input type="text" id="todo-uid">
+                <button id="todo-uid-btn">確認</button>
+            </div>
+        </div>
+
+        <!-- 檔案上傳(POST發送)練習 -->
+        <div>
+            <input type="file" id="upload-file" accept="image/*" /> <!-- 用accept限制上傳檔案僅能為image (影片為video) -->
+        </div>
+        <div>
+            <button id="do-upload">upload file</button>
+        </div>
+        <div>
+            <img src="" alt="LOGO" id="preview">
+        </div>
+
     </div>
 </body>
 <!-- <script src="assets/js/js_todo.js"></script> -->
