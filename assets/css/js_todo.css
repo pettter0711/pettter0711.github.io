@@ -32,6 +32,15 @@
     background-color: rgb(12, 40, 119);
 }
 
+.todo-input button.linker {
+    background: transparent;
+    color: #868686;
+    padding: unset;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #868686;
+    border-radius: 0;
+}
+
 .todo-item-wrap {
     margin-top: 10px;
 }
