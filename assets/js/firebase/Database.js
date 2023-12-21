@@ -48,6 +48,9 @@ class Database {
     async insert(path, item) {
         return this.inserts(path, [item])
     }
+    // insert與write不同。
+    // write會覆寫(覆蓋)原本的資料，insert會給新增的元素產生一組id(key)。
+    // 新增與重新整理都會產生新的id，讓先前資料不會被覆寫。
 
     async inserts(path, items = []) {
         let to = this.#path(path)
