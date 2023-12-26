@@ -3,6 +3,8 @@ import { TodoRealtime as TODO } from "./js_todo_class_realtime.js";  // as等於
 import { App } from "../firebase/APP.js";
 import { Auth } from "../firebase/Auth.js"
 
+import { Database } from "../firebase/Database.js";
+
 const app = await App.init(); //App的init()是async非同步，要用await
 const auth = new Auth(app);
 
@@ -77,6 +79,10 @@ const authed = async (user) => {
 
 const unauthed = () => {
     todoUid.classList.add('active');
+
+    // firebase已加入反改寫規則，測試firebase是否會再被外部寫入
+    let db = new Database(app);
+    db.write(`todo/wtxYxlMbZAWfiHsg2OnvQht7SvN2`, [{ text: '112233', checked: false }])
 
     let elAccount = document.querySelector('#todo-account');
     let elPassword = document.querySelector('#todo-password');
