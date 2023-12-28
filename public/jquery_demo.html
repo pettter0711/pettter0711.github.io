@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Demo</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <script src="assets/js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>jQuery Demo</h1>
+    </div>
+</body>
+
+<script>
+    let $ = 'JSON';
+    console.log($);
+
+    // IIFE 避免$被其他變數命名覆蓋
+    (($) => {
+        console.log($);
+    })(jQuery);
+
+    //等於以下用const去宣告功能
+
+    // const init = ($) => {
+    //     console.log($);
+    // }
+    // init(jQuery);
+
+    // 但這樣做可以省略記憶體位置、避免相同功能名稱覆蓋、即時執行此功能 (name space)。
+
+</script>
+
+</html>
