@@ -13,13 +13,31 @@
 <body>
     <div class="container">
         <h1>jQuery Demo</h1>
+        <div id="display-account">Display Account.</div>
+        <div>
+            <input type="text" name="" id="account" value="123">
+        </div>
+        <ul>
+            <li class="student">1</li>
+            <li class="student">2</li>
+            <li class="student">3</li>
+            <li class="student">4</li>
+            <li class="student">5</li>
+            <li class="student">6</li>
+        </ul>
+        <div>
+            <input type="checkbox" name="" id="dd">
+        </div>
+        <div>
+            <button id="cc">Change Li class</button>
+        </div>
+        <div>
+            <button id="ddd">Change Checkbox</button>
+        </div>
     </div>
 </body>
 
 <script>
-    let $ = 'JSON';
-    console.log($);
-
     // IIFE 避免$被其他變數命名覆蓋
     (($) => {
         console.log($);
@@ -32,7 +50,65 @@
     // }
     // init(jQuery);
 
-    // 但這樣做可以省略記憶體位置、避免相同功能名稱覆蓋、即時執行此功能 (name space)。
+    // 但 IIFE 可以省略記憶體位置、避免相同功能名稱覆蓋、即時執行此功能 (name space)。
+
+    let elDisplay = $('#display-account');
+    let elDisplayDOM = document.querySelector('#display-account');
+
+    let firstEl = elDisplay[0];
+    console.log(firstEl)
+
+    console.log(elDisplay, elDisplay.html());
+    console.log(elDisplayDOM, elDisplayDOM.innerHTML);
+
+    let elAccount = $('#account');
+    let elAccountDOM = document.querySelector('#account');
+    console.log(elAccount.val());
+    console.log(elAccount.value)
+    elAccount.val('456');
+
+    let elStudents = $('.student');
+    console.log()
+    elStudents.each((index, student) => {
+        console.log(index, student);
+        student = $(student); //重新把student包裝成jQuery
+        console.log(student, student.html(), typeof student.html());
+    })
+
+    let first = elStudents.eq(0); //取得特定jQuery物件
+    let firstDom = first[0]; //抓取物件的原生DOM
+    console.log(first, firstDom);
+
+    elStudents.on('click', (e) => {
+        console.log(e.target.innerHTML);  //事件e屬於原生dom的物件，可以用target、innerHTML等原生物件
+    })
+
+    // 用原生方式做forEach即事件監聽會變成以下:
+    let elStudentsDOM = document.querySelectorAll('.student');
+    elStudentsDOM.forEach(dom => {
+        dom.addEventListener('click', (e) => {
+            console.log('origin', e.target.innerHTML);
+        })
+    })
+
+    let cc = $('#cc');
+    cc.on('click', (e) => {
+        // if (elAccount.hasClass('active')) {
+        //     elAccount.removeClass('active')
+        // } else {
+        //     elAccount.addClass('active')
+        // };
+
+        elAccount.toggleClass('active');
+    })
+
+    let dd = $('#dd');
+    let ddd = $('#ddd');
+    ddd.on('click', (e) => {
+        dd.prop('checked')
+    })
+    //checked是checkbox的屬性之一
+    //prop同時有get(取得)跟set(設置)的功能，當你要用的屬性不屬於該物件時，不會有任何事情發生。
 
 </script>
 
