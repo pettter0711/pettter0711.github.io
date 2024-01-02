@@ -19,10 +19,10 @@
                 <div class="fn">
                     <h1>ToDo List</h1>
                     <div>
-                        <a href="#" id="change-uid-btn">登出</a>
+                        <a href="#" id="change-uid-btn" @click.prevent="logout">登出</a>
                     </div>
                 </div>
-                <div>現在登入帳號: <span id="current-uid"></span></div>
+                <div>現在登入帳號: <span id="current-uid">{{ user.uid }}</span></div>
                 <div class="todo-input">
                     <input type="text" id="todo-in">
                     <button id="todo-add-btn">新增</button>
@@ -41,15 +41,17 @@
             <div class="tabs" v-show="!isAuth">
                 <h1>請輸入帳號</h1>
                 <div class="todo-input">
-                    <input type="email" id="todo-account" placeholder="Email">
+                    <input type="email" id="todo-account" placeholder="Email" v-model="auth.account"
+                        ref="auth_account" />
                 </div>
                 <h1>請輸入密碼</h1>
                 <div class="todo-input">
-                    <input type="password" id="todo-password" placeholder="密碼">
+                    <input type="password" id="todo-password" placeholder="密碼" v-model="auth.secret"
+                        ref="auth_secret" />
                 </div>
                 <div class="todo-input" style="justify-content: space-between;">
-                    <button id="todo-register-btn" class="linker">註冊</button>
-                    <button id="todo-signin-btn">登入</button>
+                    <button id="todo-register-btn" class="linker" @click.prevent="register">註冊</button>
+                    <button id="todo-signin-btn" @click.prevent="login">登入</button>
                 </div>
             </div>
         </div>
