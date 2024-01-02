@@ -14,11 +14,15 @@ Vue.createApp({
                 account: '',
                 secret: '',
             },
+            todo: {
+                text: '',
+            },
+            items: [],
+            user: {},  //初始化變數user為一個物件，在後面的程式碼，會賦予其user的值。
             // firebase: {
             //     auth: '',
             //     database: '',
             // },
-            user: {},  //初始化變數user為一個物件，在後面的程式碼，會賦予其user的值。
         }
     },
     methods: {
@@ -138,6 +142,9 @@ Vue.createApp({
             console.log('authed');
             this.isAuth = true;  //切換v-show的顯示頁面
             this.user = user;  //賦予data裡初始化的user，user的值
+            db.listen(this.savePath(), (data) => {
+                this.items = data
+            })
         },
 
         unauthed() {
@@ -145,6 +152,23 @@ Vue.createApp({
             this.user = {};  //清空(初始化)賦予data裡初始化的user。
             this.isAuth = false;  //切換v-show的顯示頁面
         },
+
+        add() {
+            let value = this.todo.text;
+
+
+            if (value) {
+                return; // void
+            }
+
+            elInput.value = '';
+            this.$refs.todo_text.focus();
+
+            todo.add(value);
+        },
+        savePath() {
+            return `todo/${this.user.uid}`
+        }
     },
     async mounted() {
         // const app = await App.init();
