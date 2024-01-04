@@ -1,0 +1,682 @@
+html,
+body {
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 16px;
+    background-color: #ededed;
+    /* background-image: url('../images/vacation.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
+}
+
+:root {
+    --text: #303030;
+    --hover: #97340c;
+    --block: #ffffff;
+}
+
+
+/* header */
+.header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    margin-bottom: 20px;
+    background: linear-gradient(to bottom, #ffffffc7 0%, #f5be7f 80%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.header-position {
+    width: 90%;
+    height: 100%;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+}
+
+.header-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 15px 0;
+}
+
+.header .logo img {
+    width: 200px;
+    height: 100%;
+}
+
+.header-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 40px;
+}
+
+.header-menu li {
+    color: var(--text);
+    transition: 0.2s linear;
+}
+
+.header-menu li:hover {
+    color: var(--hover);
+}
+
+.header-menu>li>a {
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.header-menu>li>a .zh {
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.header-menu>li>a .en {
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+
+/* footer */
+.footer {
+    width: 100%;
+    height: 60px;
+    margin-top: 20px;
+    background: linear-gradient(to top, #f5be7f00 0%, #f5be7f 80%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.footer-position {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.footer .footer-menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.footer .footer-menu li {
+    color: var(--text);
+    transition: 0.2s linear;
+}
+
+.footer .footer-menu li:hover {
+    color: var(--hover);
+}
+
+.footer .footer-menu>li>a {
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer .footer-menu>li>a .zh {
+    letter-spacing: 2px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.footer .footer-menu>li>a .en {
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.footer .copyright {
+    font-size: 0.9rem;
+    color: var(--text);
+}
+
+
+/* main-page and tabs style */
+.main-page {
+    min-height: calc(100vh - 180px);
+}
+
+.tabs {
+    width: 100%;
+    min-height: calc(100vh - 180px);
+    display: none;
+}
+
+.tabs.active {
+    display: block;
+}
+
+
+/* main-page tabs p-1 nav-obj*/
+.nav-obj {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    width: 100%;
+    height: 45px;
+    margin-bottom: 30px;
+}
+
+.nav-obj .page-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 100%;
+    border-radius: 100px;
+    background-color: var(--text);
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.nav-obj .process-nav {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.process-item {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.process-item .point {
+    width: 18px;
+    height: 18px;
+    margin-bottom: 3px;
+    border-radius: 100px;
+    border: 5px solid var(--text);
+}
+
+.process-item .point.act {
+    border: 0;
+    background-color: var(--text);
+}
+
+.process-item::before {
+    position: absolute;
+    content: '';
+    width: 360px;
+    height: 5px;
+    top: 6px;
+    left: 40px;
+    background-color: var(--text);
+}
+
+.process-item:last-child::before {
+    display: none;
+}
+
+/* main-page tabs p-1 form-obj*/
+.form-obj {
+    width: 100%;
+    min-height: 400px;
+    padding: 0 20px;
+}
+
+.form-obj>div {
+    margin-bottom: 20px;
+}
+
+.form-obj div>label {
+    margin-right: 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.form-obj div input {
+    min-width: 230px;
+    height: 40px;
+    padding: 8px 18px;
+    outline: 0;
+    border: 0;
+    border-radius: 100px;
+    background-color: var(--block);
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--text);
+}
+
+.form-obj .material-symbols-outlined {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.sch-name input#name {
+    width: 300px;
+}
+
+.sch-intro input#intro {
+    width: calc(100% - 200px);
+}
+
+.sch-period input {
+    letter-spacing: 4px;
+}
+
+.sch-member .member-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: calc(100% - 46px);
+    gap: 15px;
+    margin-top: 15px;
+    margin-left: 62px;
+    padding-right: 20px;
+}
+
+.member-list .member-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 200px;
+    padding: 8px 18px;
+    border-radius: 100px;
+    background-color: var(--block);
+}
+
+.member-list .member-item .member-block {
+    width: 100%;
+}
+
+.member-item .delete-btn {
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.sch-member .add-member-btn {
+    padding: 8px 20px;
+    margin-left: 20px;
+    outline: 0;
+    border: 0;
+    border-radius: 100px;
+    background-color: var(--text);
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.sch-member .add-member-btn:hover {
+    background-color: var(--hover);
+}
+
+
+/* main-page tabs p-1 step-obj*/
+.step-obj {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.step-obj>div button {
+    padding: 7px 18px;
+    outline: 0;
+    border: 0;
+    border-radius: 100px;
+    background: var(--text);
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #fff;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.step-obj>div button:hover {
+    background-color: var(--hover);
+}
+
+.step-obj .delete-all-btn {
+    background-color: transparent;
+    font-size: 1.1rem;
+    color: #6a6a6a;
+    transition: 0.3s;
+}
+
+.step-obj .delete-all-btn:hover {
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+
+/* main-page tabs p-2 form-obj*/
+.info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.info span {
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--text);
+    letter-spacing: 2px;
+}
+
+.info div {
+    padding: 3px 10px;
+    border-radius: 100px;
+    background-color: var(--block);
+}
+
+.sch-arrange input#arrange-time {
+    margin-right: 10px;
+}
+
+.sch-arrange input#arrange-content {
+    width: calc(100% - 410px);
+    margin-right: 10px;
+}
+
+.sch-arrange .add-arrange-btn {
+    padding: 8px 20px;
+    margin-left: 10px;
+    outline: 0;
+    border: 0;
+    border-radius: 100px;
+    background-color: var(--text);
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.sch-arrange .add-arrange-btn:hover {
+    background-color: var(--hover);
+}
+
+.sch-arrange .arrange-list {
+    display: grid;
+    width: calc(100% - 46px);
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+    margin-left: 62px;
+}
+
+.arrange-list .arrange-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    height: 40px;
+}
+
+.arrange-list .arrange-item div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 8px 18px;
+    border-radius: 100px;
+    background-color: var(--block);
+    font-size: 1.1rem;
+}
+
+.arrange-list-time {
+    min-width: 230px;
+}
+
+.arrange-list-content {
+    width: calc(100% - 300px);
+}
+
+.arrange-item .delete-btn {
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.arrange-list .arrange-item div::before {
+    position: absolute;
+    content: '';
+    width: 6px;
+    height: 15px;
+    background-color: var(--block);
+    top: -15px;
+    left: calc(50% - 3px);
+}
+
+.arrange-list .arrange-item:first-child div::before {
+    display: none;
+}
+
+
+/* main-page tabs p-3 form-obj*/
+.tabs#p-3 .form-obj>div {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.tabs#p-3 .form-obj>div .title {
+    min-width: 48px;
+    margin-right: 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.tabs#p-3 .form-obj>div .content {
+    min-width: 230px;
+    padding: 8px 18px;
+    border-radius: 100px;
+    background-color: var(--block);
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.result-member .result-member-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    width: 100%;
+}
+
+.result-member-list .result-member-item {
+    min-width: 200px;
+    height: 40px;
+    border-radius: 100px;
+    background-color: var(--block);
+}
+
+.result-member-list .result-member-item div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 8px 18px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+.result-arrange .result-arrange-list {
+    display: grid;
+    width: calc(100% - 46px);
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+}
+
+.result-arrange-list .result-arrange-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    gap: 14px;
+}
+
+.result-arrange-list .result-arrange-item div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 8px 18px;
+    border-radius: 100px;
+    background-color: var(--block);
+    font-size: 1.1rem;
+}
+
+.result-arrange-list .result-arrange-item div::before {
+    position: absolute;
+    content: '';
+    width: 6px;
+    height: 15px;
+    background-color: var(--block);
+    top: -15px;
+    left: calc(50% - 3px);
+}
+
+.result-arrange-list .result-arrange-item:first-child div::before {
+    display: none;
+}
+
+/* main-page tabs p-3 step-obj*/
+.step-obj>div button {
+    padding: 7px 18px;
+    outline: 0;
+    border: 0;
+    border-radius: 100px;
+    background: var(--text);
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #fff;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.step-obj>div button:hover {
+    background-color: var(--hover);
+}
+
+.step-obj .action-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 270px;
+}
+
+.step-obj .cancel-btn,
+.step-obj .share-btn,
+.step-obj .download-btn {
+    position: relative;
+    padding: 2px 0 0 0;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    font-weight: unset;
+    text-align: center;
+}
+
+.step-obj .cancel-btn::before,
+.step-obj .share-btn::before,
+.step-obj .download-btn::before {
+    position: absolute;
+    content: attr(data-text);
+    top: 40px;
+    left: 4px;
+    color: var(--text);
+    font-weight: 600;
+    opacity: 0;
+    transition-duration: 0.3s;
+}
+
+.step-obj .cancel-btn:hover::before,
+.step-obj .share-btn:hover::before,
+.step-obj .download-btn:hover::before {
+    opacity: 1;
+}
+
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+#popup-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    width: 450px;
+    height: 550px;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    text-align: center;
+}
+
+#popup-container .image {
+    width: 300px;
+    max-height: 100%;
+    margin: 0 auto 20px;
+}
+
+#popup-container .image img {
+    width: 300px;
+    max-height: 100%;
+}
+
+#popup-container .pop-title {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+#popup-container .pop-text {
+    width: 100%;
+    margin-bottom: 30px;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+#popup-container .close-popup-btn {
+    padding: 8px 22px;
+    outline: 0;
+    border: 0;
+    border-radius: 5px;
+    background-color: #7066e0;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 500;
+    cursor: pointer;
+}
